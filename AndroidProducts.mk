@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_ravel.mk
+    $(LOCAL_DIR)/rvl_09.mk

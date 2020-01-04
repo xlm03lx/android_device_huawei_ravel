@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/huawei/berkeley/full_ravel.mk)
+$(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/xblissx/config/common.mk)
+$(call inherit-product, vendor/xxxxxx/config/common.mk)
 
-PRODUCT_NAME := bliss_ravel
+PRODUCT_NAME := rvl_09
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
@@ -27,6 +27,8 @@ PRODUCT_MANUFACTURER := Huawei
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS=FanthaghiroFoe
 #Apps
 PRODUCT_PACKAGES += \
     Camera2 \

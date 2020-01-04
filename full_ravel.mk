@@ -30,4 +30,4 @@ $(call inherit-product, device/huawei/ravel/device.mk)
 PRODUCT_DEVICE := ravel
 PRODUCT_NAME := full_ravel
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := ravel
+PRODUCT_MODEL := Honor Note 10
