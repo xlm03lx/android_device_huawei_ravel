@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -12,12 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 # inherit from common kirin970-common
 -include device/huawei/kirin970-common/BoardConfigCommon.mk
-
 DEVICE_PATH := device/huawei/ravel
-
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ravel,kirin970
-SELINUX_IGNORE_NEVERALLOWS := true
+TARGET_OTA_ASSERT_DEVICE := ravel,kirin970,HWBKL,RVL09
