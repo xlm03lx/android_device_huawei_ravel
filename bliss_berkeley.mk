@@ -13,19 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# Inherit from ravel device
-$(call inherit-product, device/huawei/ravel/device.mk)
-# Inherit some common AICP stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
-# Device identifier. This must come after all inclusions
+
+$(call inherit-product, device/huawei/berkeley/full_ravel.mk)
+
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/xblissx/config/common.mk)
+
+PRODUCT_NAME := bliss_ravel
 PRODUCT_DEVICE := ravel
-PRODUCT_NAME := aicp_ravel
 PRODUCT_BRAND := Huawei
-PRODUCT_MANUFACTURER := HUAWEI
 PRODUCT_MODEL := Honor Note 10
-# AICP Device Maintainers
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Fanthaghiro Foe (guffoe)"
+PRODUCT_MANUFACTURER := Huawei
+
+PRODUCT_GMS_CLIENTID_BASE := android-huawei
+
+#Apps
+PRODUCT_PACKAGES += \
+    Camera2 \
+    Gallery2 \
+    Music \
+    Calendar \
+    DeskClock
+
+# Disable dynamic partition size
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
+

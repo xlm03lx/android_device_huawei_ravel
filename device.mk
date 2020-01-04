@@ -1,5 +1,3 @@
-  GNU nano 2.5.3                      File: device.mk                                                  
-
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -19,19 +17,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/huawei/ravel/ravel-vendor.mk)
-
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-
-# Local overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+$(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
+
+# Local overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
 # Inherit from kirin970-common
 $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
