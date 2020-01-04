@@ -17,7 +17,7 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/bliss/config/BoardConfigVendor.mk)
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 PRODUCT_NAME := bliss_ravel
 PRODUCT_DEVICE := ravel
