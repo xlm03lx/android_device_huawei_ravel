@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rvl_09.mk
+    $(LOCAL_DIR)/full_ravel.mk

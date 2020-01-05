@@ -19,7 +19,6 @@ set -e
 
 # Required!
 export DEVICE=ravel
-export DEVICE_COMMON=kirin970-common
 export VENDOR=huawei
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@

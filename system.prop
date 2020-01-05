@@ -1,0 +1,45 @@
+# Audio
+audio.deep_buffer.media=true
+ro.config.media_vol_steps=6
+ro.config.vc_call_vol_steps=7
+
+# BT
+persist.sys.bt.unsupport.states=000000000000000000000011111
+persist.sys.bt.unsupport.features=00000001
+
+# Enable ADB authentication
+ro.adb.secure=1
+
+# Perf
+ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# RIL
+persist.sys.signal.level=openkirin
+ro.huaweiril=true
+
+# Make sdcards visibile in StorageManager
+persist.sys.adoptable_fbe=true
+
+# GSI always generate dex pre-opt in system image
+ro.cp_system_other_odex=0
+
+# Security Patch
+ro.build.version.security_patch_sys=2019-04-05
+
+# MediaCodec
+persist.sys.google_avc_enc=0 
+persist.sys.sr_google_avc_enc=1 
+persist.debug.wfd.enable=0 
+
+# Gpu Test
+debug.egl.hw=1 
+debug.egl.profiler=1 
+debug.hwui.use_buffer_age=false 
+debug.performance.tuning=1 
+debug.sf.hw=1 
+hwui.disable_vsync=true 
+ro.config.enable.hw_accel=true 
+video.accelerate.hw=1
+
+# Fingerprint Gestures
+sys.fpnav.enabled=1
