@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo havoc_ravel-userdebug
+add_lunch_combo evox_ravel-userdebug

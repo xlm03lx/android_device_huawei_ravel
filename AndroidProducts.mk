@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_ravel.mk
+    $(LOCAL_DIR)/evox_ravel.mk

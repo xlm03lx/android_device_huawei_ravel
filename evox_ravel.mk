@@ -17,9 +17,9 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
-PRODUCT_NAME := havoc_ravel
+PRODUCT_NAME := evox_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
 
-export export
-HAVOC_BUILD_TYPE=Official
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.havoc.maintainer=FanthaghiroFoe
+# Inherit some common Evolution X stuff.
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
