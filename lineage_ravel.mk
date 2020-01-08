@@ -17,9 +17,9 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
-PRODUCT_NAME := evox_ravel
+PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
@@ -42,3 +42,5 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
 CUSTOM_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
+
+WITHOUT_CHECK_API := true
