@@ -16,29 +16,40 @@
 
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/havoc/config/common.mk)
 
-PRODUCT_NAME := havoc_ravel
+PRODUCT_NAME := aosp_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
 PRODUCT_MANUFACTURER := Huawei
 
-PRODUCT_GMS_CLIENTID_BASE := android-huawei
+TARGET_AOSP_BASED := true
+
+#PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
 #Apps
+#PRODUCT_PACKAGES += \
+#    Camera2 \
+#    Gallery2 \
+#    Music \
+#    Calendar \
+#    DeskClock
+
+#apps
 PRODUCT_PACKAGES += \
-    Camera2 \
-    Gallery2 \
-    Music \
-    Calendar \
-    DeskClock
+    Launcher3QuickStep \
+    messaging
 
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
 
-export export
-HAVOC_BUILD_TYPE=Official
+#export export
+#HAVOC_BUILD_TYPE=Official
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=FanthaghiroFoe
