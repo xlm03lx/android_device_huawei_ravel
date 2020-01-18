@@ -38,11 +38,6 @@ PRODUCT_PACKAGES += \
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
 
-# Inherit some common Evolution X stuff.
-CUSTOM_BUILD_TYPE := OFFICIAL
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-
 WITHOUT_CHECK_API := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
