@@ -17,7 +17,7 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/liquid/config/common.mk)
 
 PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
@@ -37,11 +37,6 @@ PRODUCT_PACKAGES += \
 
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
-
-# Inherit some common Evolution X stuff.
-CUSTOM_BUILD_TYPE := OFFICIAL
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
 
 WITHOUT_CHECK_API := true
 
