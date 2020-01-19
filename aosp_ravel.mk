@@ -20,8 +20,12 @@ $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Havoc stuff.
 $(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, device/havoc/sepolicy/common/sepolicy.mk)
+
+-include vendor/havoc/build/core/config.mk
+
 
 PRODUCT_NAME := aosp_ravel
 PRODUCT_DEVICE := ravel
