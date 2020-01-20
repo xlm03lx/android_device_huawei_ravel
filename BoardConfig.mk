@@ -20,4 +20,3 @@ DEVICE_PATH := device/huawei/ravel
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ravel,kirin970
-SELINUX_IGNORE_NEVERALLOWS := true
