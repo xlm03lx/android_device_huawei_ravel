@@ -14,10 +14,15 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/huawei/ravel/full_ravel.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/liquid/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Inherit from ravel device
+$(call inherit-product, device/huawei/ravel/device.mk)
 
 PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
@@ -26,14 +31,6 @@ PRODUCT_MODEL := Honor Note 10
 PRODUCT_MANUFACTURER := Huawei
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
-
-#Apps
-PRODUCT_PACKAGES += \
-    Camera2 \
-    Gallery2 \
-    Music \
-    Calendar \
-    DeskClock
 
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false

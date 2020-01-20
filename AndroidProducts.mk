@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_ravel.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_ravel-user \
+    lineage_ravel-userdebug \
+    lineage_ravel-eng
