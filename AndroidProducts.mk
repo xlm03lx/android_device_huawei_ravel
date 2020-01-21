@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_ravel.mk
+    $(LOCAL_DIR)/liquid_ravel.mk

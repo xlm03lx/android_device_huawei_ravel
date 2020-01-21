@@ -17,9 +17,9 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aicp/config/common.mk)
+$(call inherit-product, vendor/liquid/config/common.mk)
 
-PRODUCT_NAME := aicp_ravel
+PRODUCT_NAME := liquid_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
