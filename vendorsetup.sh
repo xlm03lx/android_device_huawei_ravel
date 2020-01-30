@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo liquid_ravel-userdebug
+add_lunch_combo xtended_ravel-userdebug
