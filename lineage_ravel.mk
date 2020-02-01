@@ -17,7 +17,7 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/liquid/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
@@ -42,3 +42,5 @@ WITHOUT_CHECK_API := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="FanthaghiroFoe"
+
+CUSTOM_BUILD_TYPE := OFFICIAL
