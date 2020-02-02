@@ -17,7 +17,7 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/rr/config/common.mk)
 
 PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
