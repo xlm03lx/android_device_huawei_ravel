@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_ravel.mk
+    $(LOCAL_DIR)/floko_ravel.mk
