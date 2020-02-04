@@ -27,15 +27,14 @@ PRODUCT_MANUFACTURER := Huawei
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
-#Build decent themes 
-include vendor/themes/common.mk
+# Inherit decent themes
+$(call inherit-product-if-exists, vendor/themes/common.mk)
 
-#Build decent sounds
-include vendor/sounds/sounds.mk
+# Inherit decent sounds
+$(call inherit-product-if-exists, vendor/sounds/sounds.mk)
 
-#Build decent support 
-include vendor/support/common.mk
-
+# Inherit decent support
+$(call inherit-product-if-exists, vendor/support/common.mk)
 
 #Apps
 PRODUCT_PACKAGES += \
