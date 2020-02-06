@@ -18,8 +18,8 @@
 $(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2160
-TARGET_SCREEN_WIDTH := 1080
+#TARGET_SCREEN_HEIGHT := 2160
+#TARGET_SCREEN_WIDTH := 1080
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \

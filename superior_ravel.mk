@@ -17,9 +17,12 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
-PRODUCT_NAME := floko_ravel
+# Inherit xlm03lx's Vendor
+$(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
+
+PRODUCT_NAME := superior_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
@@ -43,4 +46,5 @@ WITHOUT_CHECK_API := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="FanthaghiroFoe"
 
-CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+
