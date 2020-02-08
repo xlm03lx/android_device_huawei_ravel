@@ -54,7 +54,7 @@
   <!-- Power consumption in suspend -->
   <item name="cpu.idle">5</item> <!-- k3v5 -->
   <!-- Power consumption due to wake lock held -->
-  <item name="cpu.awake">35</item> <!-- k3v5 -->
+  <item name="cpu.awake">21</item> <!-- k3v5 -->
   <!-- Power consumption at different speeds -->
   <array name="cpu.active">
     <value>30</value>

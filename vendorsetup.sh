@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo superior_ravel-userdebug
+add_lunch_combo xenonhd_ravel-userdebug
