@@ -16,17 +16,17 @@
 
 # Get the long list of APNs
 PRODUCT_COPY_FILES += \
-    vendor/xenonhd/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/bootleggers/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
 
-PRODUCT_NAME := xenonhd_ravel
+PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10

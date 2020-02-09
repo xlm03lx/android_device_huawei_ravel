@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xenonhd_ravel.mk
+    $(LOCAL_DIR)/lineage_ravel.mk
