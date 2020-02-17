@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo floko_ravel-userdebug
+add_lunch_combo todak_ravel-userdebug
