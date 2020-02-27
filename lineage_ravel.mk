@@ -22,7 +22,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
 
-PRODUCT_NAME := todak_ravel
+# Inherit decent  Vendor
+$(call inherit-product-if-exists, vendor/support/common.mk)
+$(call inherit-product-if-exists, vendor/themes/common.mk)
+
+PRODUCT_NAME := lineage_ravel
 PRODUCT_DEVICE := ravel
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor Note 10
