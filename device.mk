@@ -27,3 +27,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Inherit from kirin970-common
 $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
+
+# Boot SPL
+BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
+
+# Vendor SPL
+VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
