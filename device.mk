@@ -17,6 +17,8 @@
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080

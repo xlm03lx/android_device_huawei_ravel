@@ -17,8 +17,8 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
+#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
 
