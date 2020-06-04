@@ -38,7 +38,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-huawei
 PRODUCT_PACKAGES += \
     Camera2 \
     Gallery2 \
-    Music \
+    FM \
     Calendar \
     DeskClock
 
