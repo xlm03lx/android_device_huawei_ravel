@@ -14,11 +14,13 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/huawei/ravel/full_ravel.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/lineage/config/common.mk)
+
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
 
@@ -42,12 +44,9 @@ PRODUCT_PACKAGES += \
     Calendar \
     DeskClock
 
-# Disable dynamic partition size
-PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
+export ALLOW_MISSING_DEPENDENCIES=true
 
 WITHOUT_CHECK_API := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="Fanthaghiro Foe"
-
-TODAK_BUILD_TYPE := OFFICIAL
