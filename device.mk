@@ -16,6 +16,10 @@
 
 $(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
+#Use a more decent APN config
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/apns-full-conf.xml:system/etc/apns-conf.xml
+	
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -44,7 +48,7 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
-# Input
+# Input fingerprint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
 	
@@ -83,9 +87,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Offline charging
+# Fix Offline Charging on Huawmeme
 PRODUCT_PACKAGES += \
-    charger_res_images
+	huawei-charger
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/huawei_charger/files,system/etc/charger)
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -93,11 +99,13 @@ PRODUCT_PACKAGES += \
 
 # Release tools
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/releasetools.kirin970.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/releasetools.kirin970.sh
-
+	$(LOCAL_PATH)/releasetools/kirin970-on-boot.sh:system/bin/kirin970-on-boot.sh
+	$(LOCAL_PATH)/releasetools/kirin970-on-data.sh:system/bin/kirin970-on-data.sh \
+	$(LOCAL_PATH)/releasetools/kirin970-prop-handler.sh:system/bin/kirin970-prop-handler.sh
+	
 # Selinux
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sepolicy/27.0.cil:$(TARGET_COPY_OUT_SYSTEM)/etc/selinux/mapping/27.0.cil
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+	$(LOCAL_PATH)/sepolicy
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -107,13 +115,12 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.kirin970
-
-# VNDK
+	
+#VNDK config files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vndk-compat/ld.config.26.txt:system/etc/ld.config.26.txt \
-    $(LOCAL_PATH)/vndk-compat/llndk.libraries.26.txt:system/etc/llndk.libraries.26.txt \
-    $(LOCAL_PATH)/vndk-compat/vndksp.libraries.26.txt:system/etc/vndksp.libraries.26.txt \
-    $(LOCAL_PATH)/vndk-compat/ld.config.27.txt:system/etc/ld.config.27.txt
+	$(LOCAL_PATH)/vndk/vndk-detect:system/bin/vndk-detect \
+	$(LOCAL_PATH)/vndk/vndk.rc:system/etc/init/vndk.rc \	
+	$(LOCAL_PATH)/vndk/ld.config.26.txt:system/etc/ld.config.26.txt 
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
