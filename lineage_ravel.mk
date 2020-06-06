@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common.mk)
 
 # Inherit from berkeley device
-$(call inherit-product, device/huawei/ravel/device.mk)
+$(call inherit-product, device/huawei/ravel/kirin970.mk)
 # Inherit from kirin970-common
 $(call inherit-product, device/huawei/ravel/BoardConfig.mk)
 

@@ -33,12 +33,14 @@ PRODUCT_COPY_FILES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.bcm43xx.rc \
-    init.hisi.rc \
     init.kirin970.rc \
-    init.kirin970.ab.rc \
-    init.kirin970.environ.rc
+    init.kirin970.environ.rc \	
+    init.kirin970.post_boot.sh
 
+PRODUCT_PACKAGES += \
+    bootctl \
+    vintf
+	
 # Display
 PRODUCT_PACKAGES += \
     libion
@@ -83,6 +85,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.override.security_patch=$(PLATFORM_SECURITY_PATCH) \
     ro.vendor.override.build_display=$(BUILD_ID)
 
+# Properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 # Radio
 PRODUCT_PACKAGES += \
     qti-telephony-common
@@ -99,12 +104,6 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static
-
-# Release tools
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/releasetools/kirin970-on-boot.sh:system/bin/kirin970-on-boot.sh \
-	$(LOCAL_PATH)/releasetools/kirin970-on-data.sh:system/bin/kirin970-on-data.sh \
-	$(LOCAL_PATH)/releasetools/kirin970-prop-handler.sh:system/bin/kirin970-prop-handler.sh
 
 # Selinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
@@ -129,3 +128,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0 \
     android.hardware.wifi@1.2
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/apex/mediaswcodec.rc:system/etc/init/mediaswcodec-treble.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.kirin970.environ.rc:system/etc/init/init.kirin970.environ.rc

@@ -13,11 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# call the proprietary setup
-#$(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
-
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
-
 include build/make/target/board/generic_arm64_ab/BoardConfig.mk
 
 DEVICE_PATH := device/huawei/ravel
@@ -73,9 +68,6 @@ BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # Vendor SPL
 VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
-
-# Disable dynamic partition size
-#PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2220
