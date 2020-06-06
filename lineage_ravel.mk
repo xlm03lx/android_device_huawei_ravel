@@ -21,6 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common.mk)
 
+# Inherit from berkeley device
+$(call inherit-product, device/huawei/ravel/device.mk)
+# Inherit from kirin970-common
+$(call inherit-product, device/huawei/ravel/BoardConfig.mk)
+
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
 

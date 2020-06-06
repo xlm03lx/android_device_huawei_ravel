@@ -14,12 +14,15 @@
 # limitations under the License.
 #
 
+# Inherit from kirin970-common
+$(call inherit-product, device/huawei/ravel/BoardConfig.mk)
+
 $(call inherit-product-if-exists, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/apns-full-conf.xml:system/etc/apns-conf.xml
-	
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -51,7 +54,7 @@ PRODUCT_PACKAGES += \
 # Input fingerprint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
-	
+
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
@@ -99,10 +102,10 @@ PRODUCT_PACKAGES += \
 
 # Release tools
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/releasetools/kirin970-on-boot.sh:system/bin/kirin970-on-boot.sh
+	$(LOCAL_PATH)/releasetools/kirin970-on-boot.sh:system/bin/kirin970-on-boot.sh \
 	$(LOCAL_PATH)/releasetools/kirin970-on-data.sh:system/bin/kirin970-on-data.sh \
 	$(LOCAL_PATH)/releasetools/kirin970-prop-handler.sh:system/bin/kirin970-prop-handler.sh
-	
+
 # Selinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
 	$(LOCAL_PATH)/sepolicy
@@ -115,12 +118,12 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.kirin970
-	
+
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk/vndk-detect:system/bin/vndk-detect \
-	$(LOCAL_PATH)/vndk/vndk.rc:system/etc/init/vndk.rc \	
-	$(LOCAL_PATH)/vndk/ld.config.26.txt:system/etc/ld.config.26.txt 
+	$(LOCAL_PATH)/vndk/vndk.rc:system/etc/init/vndk.rc \
+	$(LOCAL_PATH)/vndk/ld.config.26.txt:system/etc/ld.config.26.txt
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
