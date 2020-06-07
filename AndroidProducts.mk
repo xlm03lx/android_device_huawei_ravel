@@ -15,3 +15,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_ravel.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_ravel-userdebug

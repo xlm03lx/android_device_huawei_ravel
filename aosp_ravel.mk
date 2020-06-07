@@ -17,9 +17,9 @@
 $(call inherit-product, device/huawei/ravel/full_ravel.mk)
 
 # Inherit some common havoc stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
-$(call inherit-product, device/havoc/sepolicy/common/sepolicy.mk)
--include vendor/havoc/build/core/config.mk
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
+#-include vendor/lineage/build/core/config.mk
 
 # Inherit xlm03lx's Vendor
 $(call inherit-product-if-exists, vendor/xlm03lx/xlm03lx.mk)
